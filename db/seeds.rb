@@ -1,5 +1,5 @@
 
-  User.create(username: "petey101",email: "petey101@gmail.com", password: "password")
+  User.create(username: "aykim",email: "theandrewkimm@gmail.com", password: "password")
   User.create(username: "tomdabomb",email: "tomdabomb@gmail.com", password: "password")
   User.create(username: "greensneakers",email: "greensneakers@gmail.com", password: "password")
   User.create(username: "jon-slickboi-silvestri",email: "slickboi4lyfe@gmail.com", password: "password")

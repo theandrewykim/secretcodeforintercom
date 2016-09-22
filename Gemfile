@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.2.3'
+ruby '2.3.1'
 
 gem 'rails', '4.1.3'
 gem 'pg'
@@ -16,6 +16,7 @@ gem 'spring',        group: :development
 gem 'bcrypt', '~> 3.1.7'
 gem 'pry-rails'
 gem 'normalize-rails'
+gem 'intercom-rails'
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.0'

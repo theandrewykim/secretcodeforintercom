@@ -11,7 +11,7 @@ class SecretsController < ApplicationController
     end
   end
 
-  def show
+  def showx
     @secret = Secret.find_by(id: params[:id])
     if @secret.solved || current_user == @secret.sender
       @message = @secret.message
