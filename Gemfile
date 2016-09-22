@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 ruby '2.3.1'
-
+gem 'dotenv-rails', :groups => [:development, :test]
 gem 'rails', '4.1.3'
 gem 'pg'
 gem 'sass-rails', '~> 4.0.3'
@@ -36,3 +36,4 @@ gem 'jquery-ui-rails'
 gem 'jquery-modal-rails'
 
 gem 'rails_12factor', group: :production
+gem 'intercom'

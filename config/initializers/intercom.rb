@@ -17,7 +17,7 @@ IntercomRails.config do |config|
   #
   config.enabled_environments = ["development", "production"]
   config.include_for_logged_out_users = true
-  config.api_secret = 'xOBUYaBg2y8FSdUCyNxHUOnxrYBSQK7nn1LBCsct'
+  config.api_secret = ENV["INTERCOM_KEY"]
   config.user.custom_data = {
     :friend_count => Proc.new {|user| user.friends.length}
   }
