@@ -18,8 +18,11 @@ class ChordalsController < ApplicationController
     	data = payload_body
     	key = ENV["HUB_SECRET"]
     	digest = OpenSSL::Digest.new('sha1')
-    	hmac = OpenSSL::HMAC.hexdigest(digest, key, data)
-    	raise "error" if hmac != secret_hash
+    	p data
+    	p key
+    	p digest
+    	# hmac = OpenSSL::HMAC.hexdigest(digest, key, data)
+    	# raise "error" if hmac != secret_hash
     end
 
 end
