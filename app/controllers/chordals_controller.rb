@@ -3,7 +3,7 @@ class ChordalsController < ApplicationController
 
 
 
-	def accept_webhook4
+	def accept_webhook
       @headers = request.headers
       @body = request.body.read
       p @body
