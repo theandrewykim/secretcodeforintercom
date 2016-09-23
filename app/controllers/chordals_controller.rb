@@ -5,12 +5,12 @@ class ChordalsController < ApplicationController
 
 	def accept_webhook
 	  @body = request.body.read
-	  verify_signature(@body)
-      @headers = request.headers
-      p @headers
-      render :nothing => true
-      push = JSON.parse(params[:payload])
-  	  puts "chord received #{push.inspect}"
+	  p @body
+	  # verify_signature(@body)
+   #    @headers = request.headers
+   #    push = JSON.parse(params[:payload])
+  	#   puts "chord received #{push.inspect}"
+  	  render :nothing => true
 	end
 
     def verify_signature(payload_body)
