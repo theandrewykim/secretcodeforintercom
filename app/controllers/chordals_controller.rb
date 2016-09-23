@@ -7,6 +7,6 @@ class ChordalsController < ApplicationController
 		@body = request.body
     @headers = request.headers
     flash.now[:notice] = "woooo"
-    render "index"
+    redirect_to "user"
 	end
 end
