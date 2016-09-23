@@ -8,7 +8,7 @@ class ChordalsController < ApplicationController
 	  p @body
 	  # verify_signature(@body)
       @headers = request.headers
-      p @headers
+      p @headers["HTTP_X_REQUEST_ID"]
    #    push = JSON.parse(params[:payload])
   	#   puts "chord received #{push.inspect}"
   	  render :nothing => true
