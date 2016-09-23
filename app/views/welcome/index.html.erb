@@ -2,7 +2,8 @@
 <h2>Welcome to SecretCode!</h2>
 <p>At SecretCode, you can create secret messages for your friends using REAL computer code!</p>
 <h3>Please <%= link_to 'login', new_user_session_path %> or <%= link_to 'signup', new_user_registration_path %> to get started!</h3>
-<=% flash[:notice] if !!flash %>
+
+<%= flash[:notice] if !!flash %>
 
 <%= link_to "click", accept_webhook_chordal_path, {method: :post} %>
 </main>
