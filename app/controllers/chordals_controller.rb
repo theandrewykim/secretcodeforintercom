@@ -6,7 +6,7 @@ class ChordalsController < ApplicationController
 	def accept_webhook
 		@body = request.body
     @headers = request.headers
-    flash[:notice].now = @headers
+    flash.now[:notice] = "woooo"
     render "index"
 	end
 end
