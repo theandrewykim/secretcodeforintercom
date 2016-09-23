@@ -10,7 +10,9 @@ Rails.application.routes.draw do
   resources :algorithms, only: [:show]
   resources :messages, only: [:new, :create, :show]
   resources :templates, only:[:index, :show]
-  resources :chordal, only:[:create], path_names: {create: 'accept_webhook'}
+  resource :chordal do
+    post :accept_webhook
+  end
 
   resources :users, only: [:index, :show] do
     member do
