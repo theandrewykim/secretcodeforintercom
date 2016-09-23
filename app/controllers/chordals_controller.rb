@@ -7,6 +7,6 @@ class ChordalsController < ApplicationController
 		@body = request.body
     @headers = request.headers
     flash.now[:notice] = "woooo"
-    redirect_to "user"
+    redirect_to "/friendships"
 	end
 end
