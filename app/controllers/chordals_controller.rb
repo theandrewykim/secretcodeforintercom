@@ -5,6 +5,8 @@ class ChordalsController < ApplicationController
 
 	def accept_webhook
 	  @body = request.body
-      @headers = request.headers["X-Hub-Signature"]
+      @headers = request.headers
+      p @headers
+      render :nothing => true
 	end
 end
