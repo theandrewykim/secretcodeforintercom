@@ -1,4 +1,5 @@
 class ChordalsController < ApplicationController
+  require 'openssl'
   skip_before_filter  :verify_authenticity_token, :authenticate_user!
 
 
