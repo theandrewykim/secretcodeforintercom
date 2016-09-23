@@ -6,14 +6,19 @@ class ChordalsController < ApplicationController
 	def accept_webhook
       @headers = request.headers
       @body = request.body.read
-      verify_signature(@body)
-      p @headers["HTTP_X_HUB_SIGNATURE"]
-  	  render :nothing => true
+      secret_hash = @header["HTTP_X_HUB_SIGNATURE"]
+      verify_signature(@body, secret_hash)
+   	  render :nothing => true
 	end
 
-    def verify_signature(payload_body)
-      signature = 'sha1=' + OpenSSL::HMAC.hexdigest(OpenSSL::Digest.new('sha1'), ENV['HUB_SECRET'], payload_body)
-      return halt 500, "Signatures didn't match!" unless Rack::Utils.secure_compare(signature, request.env['HTTP_X_HUB_SIGNATURE'])
+	private
+
+    def verify_signature(payload_body, secret_hash)
+    	data = payload_body
+    	key = ENV["HUB_SECRET"]
+    	digest = OPENSSL::Digest.new('sha1')
+    	hmac = OpenSSL::HMAC.hexdigest(digest, key, data)
+    	raise "error" if hmac != secret_hash
     end
 
 end
