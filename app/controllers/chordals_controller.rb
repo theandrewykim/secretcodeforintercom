@@ -4,9 +4,8 @@ class ChordalsController < ApplicationController
 
 
 	def accept_webhook
-		@body = request.body
-    @headers = request.headers
-    flash.now[:notice] = "woooo"
-    redirect_to "/friendships"
+	  @body = request.body
+      @headers = request.headers
+      p @headers
 	end
 end
