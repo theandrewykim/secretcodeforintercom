@@ -17,7 +17,7 @@ class ChordalsController < ApplicationController
     def verify_signature(payload_body, secret_hash)
     	data = payload_body
     	key = ENV["HUB_SECRET"]
-    	digest = OPENSSL::Digest.new('sha1')
+    	digest = OpenSSL::Digest.new('sha1')
     	hmac = OpenSSL::HMAC.hexdigest(digest, key, data)
     	raise "error" if hmac != secret_hash
     end
