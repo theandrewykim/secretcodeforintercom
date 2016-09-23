@@ -3,17 +3,11 @@ class ChordalsController < ApplicationController
 
 
 
-	def accept_webhook
-	  @body = request.body.read
-	  p @body
-	  # verify_signature(@body)
+	def accept_webhook4
       @headers = request.headers
+      @body = request.body.read
       p @body
-      p @headers
-      p "hello"
-      p @headers["HTTP_X_REQUEST_ID"]
-   #    push = JSON.parse(params[:payload])
-  	#   puts "chord received #{push.inspect}"
+      p @headers["HTTP_X_HUB_SIGNATURE"]
   	  render :nothing => true
 	end
 
