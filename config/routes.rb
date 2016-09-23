@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   resources :algorithms, only: [:show]
   resources :messages, only: [:new, :create, :show]
   resources :templates, only:[:index, :show]
-  resources :chordal, only:[:index]
+  resources :chordal, path_names: {create: 'accept_webhook'}
 
   resources :users, only: [:index, :show] do
     member do

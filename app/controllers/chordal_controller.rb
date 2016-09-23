@@ -1,6 +1,6 @@
 class ChordalController < ApplicationController
 
-	def index
+	def accept_webhook
 		@body = request.body
 	end
 end
