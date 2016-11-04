@@ -25,9 +25,6 @@ IntercomRails.config do |config|
     :name => Proc.new {|user| user.username},
   }
 
- config.user.custom_data = {
-    :user_id => Proc.new {|user| user.username} 
-  }
   # == Current user method/variable
   # The method/variable that contains the logged in user in your controllers.
   # If it is `current_user` or `@user`, then you can ignore this
