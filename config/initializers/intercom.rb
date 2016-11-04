@@ -22,7 +22,11 @@ IntercomRails.config do |config|
     :friend_count => Proc.new {|user| user.friends.length}
   }
   config.user.custom_data = {
-    :name => Proc.new {|user| user.username}
+    :name => Proc.new {|user| user.username},
+  }
+
+ config.user.custom_data = {
+    user_id => Proc.new {|user| user.username} 
   }
   # == Current user method/variable
   # The method/variable that contains the logged in user in your controllers.
