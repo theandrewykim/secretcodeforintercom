@@ -24,6 +24,7 @@ IntercomRails.config do |config|
   config.user.custom_data = {
     :name => Proc.new {|user| user.username},
   }
+  config.user.exclude_if = Proc.new { |user| user.username == "meowmix"}
 
   # == Current user method/variable
   # The method/variable that contains the logged in user in your controllers.
