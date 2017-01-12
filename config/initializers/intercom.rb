@@ -25,6 +25,10 @@ IntercomRails.config do |config|
     :name => Proc.new {|user| user.username},
   }
 
+  conifg.user.custom_data = {
+    :user_id => Proc.new {|user| user.email}
+  }
+
   # config.user.exclude_if = Proc.new {|user| user.secrets.length == 0}
 
   # == Current user method/variable
