@@ -18,14 +18,14 @@
       <ul>
         <li><%= link_to current_user.username, "/users/#{current_user.id}" %></li>
         <li><%= link_to 'Logout', destroy_user_session_path, method: :delete %></li>
-      </ul>
     <% else %>
        <ul>
           <li> <%= link_to 'login', new_user_session_path %></li>
           <li> <%= link_to 'signup', new_user_registration_path %></li>
-        </ul>
+
    <% end %>
-   <button type="button" class="intercom-link">Chat with e!</button>
+          <li><button type="button" class="intercom-link">Chat with me!</button></li>
+       </ul>
  </nav>
 <h1><%= link_to 'SecretCode', '/' %></h1>
 
