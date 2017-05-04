@@ -18,7 +18,7 @@ IntercomRails.config do |config|
   config.enabled_environments = ["development", "production"]
   config.include_for_logged_out_users = true
   config.api_secret = ENV["INTERCOM_KEY"]
-  config.inbox.custom_activator = '.intercom-link'
+  config.inbox.custom_activator = ".intercom-link"
   config.user.custom_data = {
     :friend_count => Proc.new {|user| user.friends.length}
   }
