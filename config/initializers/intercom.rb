@@ -27,7 +27,7 @@ IntercomRails.config do |config|
   }
 
   config.user.custom_data = {
-    :user_id => Proc.new {|user| user.email}
+    :user_id => Proc.new {|user| user.id}
   }
 
   # config.user.exclude_if = Proc.new {|user| user.secrets.length == 0}
