@@ -9,6 +9,7 @@ class ChordalsController < ApplicationController
       @body = request.body.read
       secret_hash = @headers["HTTP_X_HUB_SIGNATURE"]
       verify_signature(@body, secret_hash)
+      print 'hello world!'
    	  render :nothing => true
 	end
 
